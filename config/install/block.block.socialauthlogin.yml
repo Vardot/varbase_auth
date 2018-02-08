@@ -9,7 +9,7 @@ third_party_settings:
   block_class:
     classes: ''
 id: socialauthlogin
-theme: vartheme
+theme: vartheme_material
 region: content
 weight: -7
 provider: null
