@@ -14,7 +14,7 @@ function varbase_auth_preprocess(&$variables) {
   $moduleHandler = \Drupal::service('module_handler');
   $modules_list = \Drupal::service('module_handler')->getModuleList();
 
-  $social_flag = TRUE;
+  $social_flag = FALSE;
 
   // Check if at least one social auth module is enabled.
   foreach ($modules_list as $module => $value) {
