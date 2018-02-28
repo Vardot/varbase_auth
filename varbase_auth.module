@@ -8,54 +8,43 @@
 use Drupal\block\Entity\Block;
 
 /**
- * Implements hook_form_FORM_ID_alter().
+ * Implements hook_preprocess_page().
  */
-function varbase_auth_preprocess(&$variables) {
-  $moduleHandler = \Drupal::service('module_handler');
-  $modules_list = \Drupal::service('module_handler')->getModuleList();
+function varbase_auth_preprocess_page(&$variables) {
+  
+  $current_rout = \Drupal::routeMatch()->getRouteName();
+  
+  $current_rout = (string)$current_rout;
+  
+  if ($current_rout == 'user.register' ||
+      $current_rout == 'user.login') {
+    // Get list of enabled modules.
+    $modules_list = \Drupal::service('module_handler')->getModuleList();
 
-  $social_flag = FALSE;
-
-  // Check if at least one social auth module is enabled.
-  foreach ($modules_list as $module => $value) {
-    if (substr_count($module, 'social_auth_') != 0) {
-      $social_flag = TRUE;
-      break;
+    // Check if at least one social auth module is enabled.
+    $we_do_have_enabled_social_auth_modules = FALSE;
+    foreach ($modules_list as $module_index => $module_value) {
+      $module_index = (string)$module_index;
+      if (substr_count($module_index, 'social_auth_') > 0) {
+        $we_do_have_enabled_social_auth_modules = TRUE;
+        break;
+      }
     }
-  }
-
-  if ($moduleHandler->moduleExists('varbase_auth') && $social_flag) {
-    $block = Block::load('socialauthlogin');
-    $block->set('status', 1);
-    $block->save();
 
     // Add variables to template.
     _varbase_auth_add_template_variable($variables, [
-      'modules_enabled' => [
+      'we_do_have_enabled_social_auth_modules' => [
         'type' => 'bool',
-        'value' => 1,
-      ],
-    ]);
-  }
-  else {
-    $block = Block::load('socialauthlogin');
-    $block->set('status', 0);
-    $block->save();
-
-    // Add variables to template.
-    _varbase_auth_add_template_variable($variables, [
-      'modules_enabled' => [
-        'type' => 'bool',
-        'value' => 0 ,
+        'value' => $we_do_have_enabled_social_auth_modules,
       ],
     ]);
   }
 }
 
 /**
- * Populates TWIG variables with VARBASE_AUTH related data.
+ * Populates TWIG variables with varbase related data.
  *
- * E.g.: $variables['VARBASE_AUTH']['test'] becomes
+ * E.g.: $variables['varbase']['test'] becomes
  * {{ VARBASE_AUTH.test }} in the templates.
  *
  * @param array &$variables
@@ -69,7 +58,7 @@ function varbase_auth_preprocess(&$variables) {
  * @internal
  */
 function _varbase_auth_add_template_variable(array &$variables, array $data = NULL) {
-  static $key = 'VARBASE_AUTH';
+  static $key = 'varbase';
 
   if (!isset($variables[$key])) {
     $variables[$key] = $data;
