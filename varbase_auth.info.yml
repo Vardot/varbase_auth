@@ -5,7 +5,5 @@ core: 8.x
 version: 8.x-6.x-dev
 package: Varbase
 dependencies:
-  - block
-  - block_class
+  - varbase_core
   - social_auth
-  - system
