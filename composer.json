@@ -31,7 +31,7 @@
     "oomphinc/composer-installers-extender": "^1.1.2",
     "cweagans/composer-patches": "^1.6.4",
     "drupal/drupal-library-installer-plugin": "^0.3",
-    "drupal/varbase_core": "5.*",
+    "drupal/varbase_core": "6.*",
     "drupal/login_destination": "1.x-dev#54be8b89fdc073ca40af6b9b2eeb050e0aeb7908",
     "drupal/betterlogin": "1.x-dev#f7cf1c5c9ec5e80c6ac0ef04ed605e25495232cd",
     "drupal/social_api": "^2.0-beta4",
