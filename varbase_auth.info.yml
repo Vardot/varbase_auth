@@ -10,3 +10,4 @@ dependencies:
   - social_auth:social_auth
 install:
   - block_class
+  - betterlogin
