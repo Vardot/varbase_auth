@@ -31,8 +31,6 @@
     "oomphinc/composer-installers-extender": "~1",
     "cweagans/composer-patches": "~1",
     "drupal/drupal-library-installer-plugin": "^0.3",
-    "drupal/login_destination": "1.x-dev#54be8b89fdc073ca40af6b9b2eeb050e0aeb7908",
-    "drupal/betterlogin": "~1",
     "drupal/social_api": "~2",
     "drupal/social_auth": "~2",
     "drupal/social_auth_google": "~2",
@@ -49,12 +47,6 @@
       "npm-asset"
     ],
     "enable-patching": true,
-    "composer-exit-on-patch-failure": true,
-    "patches": {
-      "drupal/login_destination": {
-        "Issue #2947616: Fixed SetOptions on null causing error.":
-        "https://www.drupal.org/files/issues/2018-03-09/toolbar_alter_error-2947616-11.patch"
-      }
-    }
+    "composer-exit-on-patch-failure": true
   }
 }
