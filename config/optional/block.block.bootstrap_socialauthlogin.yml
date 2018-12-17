@@ -5,9 +5,9 @@ dependencies:
     - social_auth
     - system
   theme:
-    - vartheme
-id: vartheme_socialauthlogin
-theme: vartheme
+    - bootstrap
+id: bootstrap_socialauthlogin
+theme: bootstrap
 region: content
 weight: -7
 provider: null

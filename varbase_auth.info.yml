@@ -8,5 +8,3 @@ dependencies:
   - drupal:system
   - drupal:block
   - social_auth:social_auth
-install:
-  - block_class

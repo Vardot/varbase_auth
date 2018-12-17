@@ -5,9 +5,9 @@ dependencies:
     - social_auth
     - system
   theme:
-    - vartheme
-id: vartheme_socialauthlogin
-theme: vartheme
+    - stark
+id: stark_socialauthlogin
+theme: stark
 region: content
 weight: -7
 provider: null
