@@ -4,6 +4,7 @@ description: 'Adds single sign-on using existing information from a social netwo
 core: 8.x
 version: 8.x-6.x-dev
 package: Varbase
+project: varbase_auth
 dependencies:
   - drupal:system
   - drupal:block
