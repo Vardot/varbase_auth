@@ -5,17 +5,15 @@
  * Contains varbase_auth.module.
  */
 
-use Drupal\block\Entity\Block;
-
 /**
  * Implements hook_preprocess_page().
  */
 function varbase_auth_preprocess_page(&$variables) {
-  
+
   $current_rout = \Drupal::routeMatch()->getRouteName();
-  
-  $current_rout = (string)$current_rout;
-  
+
+  $current_rout = (string) $current_rout;
+
   if ($current_rout == 'user.register' ||
       $current_rout == 'user.login') {
     // Get list of enabled modules.
@@ -24,7 +22,7 @@ function varbase_auth_preprocess_page(&$variables) {
     // Check if at least one social auth module is enabled.
     $we_do_have_enabled_social_auth_modules = FALSE;
     foreach ($modules_list as $module_index => $module_value) {
-      $module_index = (string)$module_index;
+      $module_index = (string) $module_index;
       if (substr_count($module_index, 'social_auth_') > 0) {
         $we_do_have_enabled_social_auth_modules = TRUE;
         break;

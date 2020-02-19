@@ -6,7 +6,6 @@
  */
 
 use Symfony\Component\Yaml\Yaml;
-use Drupal\Core\Config;
 use Drupal\Core\Config\InstallStorage;
 use Drupal\Core\Config\StorageInterface;
 use Drupal\Core\Config\FileStorage;
@@ -20,8 +19,8 @@ function varbase_auth_install() {
   $module_path = Drupal::service('module_handler')->getModule($module_name)->getPath();
 
   // Processer for install: in [$module_name].info.yml file.
-  // ---------------------------------------------------------------------------
-  $module_info_file = $module_path . '/'. $module_name . '.info.yml';
+  // ---------------------------------------------------------------------------.
+  $module_info_file = $module_path . '/' . $module_name . '.info.yml';
   if (file_exists($module_info_file)) {
     $module_info_data = (array) Yaml::parse(file_get_contents($module_info_file));
     if (isset($module_info_data['install'])
@@ -41,7 +40,7 @@ function varbase_auth_install() {
     $config_installer->installOptionalConfig($storage, '');
 
     // Have the .settings.yml configs into the active config.
-    $settings_config_files = file_scan_directory($optional_install_path, '/^.*\\.(settings.yml)$/i');
+    $settings_config_files = \Drupal::service('file_system')->scanDirectory($optional_install_path, '/^.*\\.(settings.yml)$/i');
     if (isset($settings_config_files) && is_array($settings_config_files)) {
       foreach ($settings_config_files as $settings_config_file) {
         $settings_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $settings_config_file->uri);
@@ -52,15 +51,14 @@ function varbase_auth_install() {
     }
   }
   // ---------------------------------------------------------------------------
-
   // Install some additional modules for social auth.
   $configFactory = \Drupal::configFactory()->getEditable('simple.settings');
   $auth_modules = $configFactory->get('social_auth_type');
 
   if (isset($auth_modules) && is_array($auth_modules) && count($auth_modules) > 0) {
-    
+
     $modules_to_install = [];
-    foreach ($auth_modules as $auth_module_index => $auth_module) {
+    foreach ($auth_modules as $auth_module) {
       if (is_string($auth_module)) {
         array_push($modules_to_install, $auth_module);
       }
