@@ -60,6 +60,8 @@ class VarbaseAuthTest extends BrowserTestBase {
    */
   public function testCheckVarbaseAuthUserAuthentication() {
     $assert_session = $this->assertSession();
+    
+    $this->drupalLogin($this->rootUser);
 
     $this->drupalGet('/admin/config/social-api/social-auth');
     $assert_session->pageTextContains('social_auth_facebook');
