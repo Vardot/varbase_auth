@@ -39,7 +39,7 @@ class VarbaseAuthTest extends BrowserTestBase {
 
     $this->drupalGet('/user/login');
 
-    $assert_session->elementExists('css', '.block.block-social-auth.block-social-auth-login');
+    $assert_session->elementExists('css', '.block-social-auth-login');
 
   }
 
@@ -51,7 +51,7 @@ class VarbaseAuthTest extends BrowserTestBase {
 
     $this->drupalGet('/user/register');
 
-    $assert_session->elementExists('css', '.block.block-social-auth.block-social-auth-login');
+    $assert_session->elementExists('css', '.block-social-auth');
 
   }
 
