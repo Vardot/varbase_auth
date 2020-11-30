@@ -27,11 +27,10 @@
     }
   },
   "require": {
-    "composer/installers": "~1.0",
-    "oomphinc/composer-installers-extender": "~1.0",
+    "composer/installers": "~1.0 || ~2.0",
+    "oomphinc/composer-installers-extender": "~1.0 || ~2.0",
     "cweagans/composer-patches": "~1.0",
-    "drupal/drupal-library-installer-plugin": "^0.3",
-    "drupal/core": "^9 || ~10.0.0",
+    "drupal/core": "~9.0",
     "drupal/social_api": "~2.0",
     "drupal/social_auth": "~2.0",
     "drupal/social_auth_google": "~2.0",
@@ -40,10 +39,6 @@
     "drupal/social_auth_linkedin": "~2.0"
   },
   "extra": {
-    "installer-types": [
-      "bower-asset",
-      "npm-asset"
-    ],
     "enable-patching": true,
     "composer-exit-on-patch-failure": true
   }
