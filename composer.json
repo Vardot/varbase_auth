@@ -47,7 +47,9 @@
     "patches": {
       "drupal/social_auth_twitter": {
         "Issue #3068326: Fix LogicException & RuntimeException on user login and registration":
-        "https://www.drupal.org/files/issues/2020-09-16/3068326-5.patch"
+        "https://www.drupal.org/files/issues/2020-09-16/3068326-5.patch",
+        "Issue #3201021: Fix Fatal Error  when the Twitter social button clicked on, or When the login page redirects to user/login/twitter":
+        "https://www.drupal.org/files/issues/2021-03-01/3201021-2.patch"
       }
     }
   }
