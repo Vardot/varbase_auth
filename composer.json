@@ -40,6 +40,12 @@
   },
   "extra": {
     "enable-patching": true,
-    "composer-exit-on-patch-failure": true
+    "composer-exit-on-patch-failure": true,
+    "patches": {
+      "drupal/social_auth_twitter": {
+        "Issue #3068326: Fix LogicException & RuntimeException on user login and registration":
+        "https://www.drupal.org/files/issues/2020-09-16/3068326-5.patch"
+      }
+    }
   }
 }
