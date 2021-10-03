@@ -1,6 +1,6 @@
-name: 'Varbase Social Single Sign-On'
+name: "Varbase Social Single Sign-On"
 type: module
-description: 'Adds single sign-on using existing information from a social networking service such as Facebook, Twitter or Google+'
+description: "Adds single sign-on using existing information from a social networking service such as Facebook, Twitter or Google+"
 package: Varbase
 core_version_requirement: ^9
 dependencies:
