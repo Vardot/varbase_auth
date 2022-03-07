@@ -35,7 +35,7 @@
     "drupal/social_auth": "~3.0",
     "drupal/social_auth_google": "~3.0",
     "drupal/social_auth_facebook": "~3.0",
-    "drupal/social_auth_twitter": "2.x-dev",
+    "drupal/social_auth_twitter": "~2.0",
     "drupal/social_auth_linkedin": "~3.0"
   },
   "extra": {
@@ -43,12 +43,6 @@
       "dev-8.x-6.x": "8.6.x-dev"
     },
     "enable-patching": true,
-    "composer-exit-on-patch-failure": true,
-    "patches": {
-      "drupal/social_auth_twitter": {
-        "Issue #3068326: Fix LogicException & RuntimeException on user login and registration":
-        "https://www.drupal.org/files/issues/2021-03-01/3068326-12.patch"
-      }
-    }
+    "composer-exit-on-patch-failure": true
   }
 }
