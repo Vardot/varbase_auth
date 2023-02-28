@@ -12,9 +12,12 @@ use Vardot\Installer\ModuleInstallerFactory;
  */
 function varbase_auth_install() {
 
-  // Processer for install: in varbase_auth.info.yml file.
+  // Processor for install: in varbase_auth.info.yml file.
   // ---------------------------------------------------------------------------.
   ModuleInstallerFactory::installList('varbase_auth');
+
+  // Add permissions.
+  ModuleInstallerFactory::addPermissions('varbase_auth');
 
 }
 
