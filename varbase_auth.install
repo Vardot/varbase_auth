@@ -5,16 +5,19 @@
  * Install, update and uninstall functions for the varbase auth module.
  */
 
-use Vardot\Installer\ModuleInstallerFactory;
+ use Vardot\Installer\ModuleInstallerFactory;
 
 /**
  * Implements hook_install().
  */
 function varbase_auth_install() {
 
-  // Processer for install: in varbase_auth.info.yml file.
+  // Processor for install: in varbase_auth.info.yml file.
   // ---------------------------------------------------------------------------.
   ModuleInstallerFactory::installList('varbase_auth');
+
+  // Add permissions.
+  ModuleInstallerFactory::addPermissions('varbase_auth');
 
 }
 
