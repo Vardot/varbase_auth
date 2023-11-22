@@ -1,6 +1,6 @@
 {
   "name": "varbase_auth",
-  "description": "Adds single sign-on using existing information from a social networking service such as Facebook, Twitter or Google+",
+  "description": "Adds single sign-on using existing information from a social networking service. Such as Facebook, Twitter, LinkedIn, or Google. Built using Social API.",
   "private": true,
   "license": "GPL-2.0",
   "engines": {
