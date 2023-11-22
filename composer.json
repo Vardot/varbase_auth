@@ -1,6 +1,6 @@
 {
   "name": "drupal/varbase_auth",
-  "description": "Varbase Social Single Sign-On: Adds single sign-on using existing information from a social networking service such as Facebook, Twitter or Google+",
+  "description": "Varbase Social Single Sign-On: Adds single sign-on using existing information from a social networking service. Such as Facebook, Twitter, LinkedIn, or Google. Built using Social API.",
   "type": "drupal-module",
   "homepage": "https://www.drupal.org/project/varbase_auth",
   "license": "GPL-2.0-or-later",
@@ -30,7 +30,7 @@
     "composer/installers": "~2.0",
     "oomphinc/composer-installers-extender": "~2.0",
     "cweagans/composer-patches": "~1.0",
-    "drupal/core": "~9.5.0 || ~10.1.0",
+    "drupal/core": "~9",
     "vardot/module-installer-factory": "~1.0",
     "drupal/social_api": "~3.0",
     "drupal/social_auth": "~3.0",
