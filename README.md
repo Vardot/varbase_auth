@@ -8,7 +8,7 @@ Adds single sign-on using existing information from a social networking service.
 Built using Social API.
  [Social API](https://www.drupal.org/project/social_api).
 
-Now you can install Varbase Social Single Sign-On with any Drupal 9+ site.
+Now you can install Varbase Social Single Sign-On with any Drupal site.
  Even if installed with the Minimal or Standard profile.
 
 However, using it with Varbase distro gives you way much more cool stuff!

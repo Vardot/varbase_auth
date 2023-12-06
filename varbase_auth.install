@@ -7,6 +7,10 @@
 
 use Vardot\Installer\ModuleInstallerFactory;
 
+// Include all helpers and updates.
+include_once __DIR__ . '/includes/helpers.inc';
+include_once __DIR__ . '/includes/updates.inc';
+
 /**
  * Implements hook_install().
  */
@@ -20,6 +24,3 @@ function varbase_auth_install() {
   ModuleInstallerFactory::addPermissions('varbase_auth');
 
 }
-
-// Load include all updates and apply them.
-\Drupal::moduleHandler()->loadInclude('varbase_auth', 'inc', 'include/updates/all');
