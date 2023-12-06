@@ -27,18 +27,18 @@
     }
   },
   "require": {
-    "composer/installers": "~2.0",
-    "oomphinc/composer-installers-extender": "~2.0",
-    "cweagans/composer-patches": "~1.0",
+    "composer/installers": "~2",
+    "oomphinc/composer-installers-extender": "~2",
+    "cweagans/composer-patches": "~1",
     "drupal/core": "~10",
-    "vardot/entity-definition-update-manager": "~1.0",
-    "vardot/module-installer-factory": "~1.0",
-    "drupal/social_api": "~3.0",
-    "drupal/social_auth": "~3.0",
-    "drupal/social_auth_google": "~3.0",
-    "drupal/social_auth_facebook": "~3.0",
-    "drupal/social_auth_twitter": "~3.0",
-    "drupal/social_auth_linkedin": "~3.0"
+    "vardot/entity-definition-update-manager": "~1",
+    "vardot/module-installer-factory": "~1",
+    "drupal/social_api": "~3",
+    "drupal/social_auth": "~3",
+    "drupal/social_auth_google": "~3",
+    "drupal/social_auth_facebook": "~3",
+    "drupal/social_auth_twitter": "~3",
+    "drupal/social_auth_linkedin": "~3"
   },
   "extra": {
     "enable-patching": true,
