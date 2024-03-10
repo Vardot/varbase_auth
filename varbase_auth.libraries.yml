@@ -1,0 +1,4 @@
+auth-icons:
+  css:
+    theme:
+      css/theme/auth-icons.theme.css: { }
