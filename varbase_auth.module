@@ -50,7 +50,7 @@ function varbase_auth_preprocess_login_with(&$variables) {
   if (\Drupal::moduleHandler()->moduleExists('social_auth')) {
     foreach ($variables['social_networks'] as $social_network_index => $social_network) {
       if (isset($social_network['img_path'])) {
-        $module_path = Drupal::service('module_handler')->getTheme('varbase_auth')->getPath();
+        $module_path = Drupal::service('module_handler')->getModule('varbase_auth')->getPath();
 
         $replaced_path_for_icons = str_replace('modules/contrib', 'social_auth', $social_network['img_path']);
         $social_network_img_path_in_vartheme = $module_path . '/images/' . $replaced_path_for_icons;
@@ -75,4 +75,28 @@ function varbase_auth_library_info_alter(&$libraries, $extension) {
     unset($libraries['auth-icons']['css']);
     $libraries['auth-icons']['dependencies'][] = 'varbase_auth/auth-icons';
   }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function varbase_auth_theme($existing, $type, $theme, $path) {
+  return [
+    'block_social_auth_html' => [
+      'template' => 'block--social-auth.html',
+      'variables' => [
+        'attributes' => [],
+        'children' => [],
+      ],
+      'path' => $path . '/templates',
+    ],
+    'login_with' => [
+      'template' => 'login-with',
+      'variables' => [
+        'attributes' => [],
+        'children' => [],
+      ],
+      'path' => $path . '/templates',
+    ],
+  ];
 }
