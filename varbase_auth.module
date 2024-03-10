@@ -72,7 +72,7 @@ function varbase_auth_library_info_alter(&$libraries, $extension) {
     && isset($libraries['auth-icons'])
     && \Drupal::service('theme.manager')->getActiveTheme()->getName() == 'gin') {
 
-    unset($libraries['social_auth']['css']);
-    $libraries['social_auth']['dependencies'][] = 'varbase_auth/auth-icons';
+    unset($libraries['auth-icons']['css']);
+    $libraries['auth-icons']['dependencies'][] = 'varbase_auth/auth-icons';
   }
 }
