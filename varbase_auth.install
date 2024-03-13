@@ -5,7 +5,8 @@
  * Install, update and uninstall functions for the varbase auth module.
  */
 
-use Vardot\Installer\ModuleInstallerFactory;
+use Drupal\Core\Recipe\Recipe;
+use Drupal\Core\Recipe\RecipeRunner;
 
 // Include all helpers and updates.
 include_once __DIR__ . '/includes/helpers.inc';
@@ -16,11 +17,7 @@ include_once __DIR__ . '/includes/updates.inc';
  */
 function varbase_auth_install() {
 
-  // Processor for install: in varbase_auth.info.yml file.
-  // ---------------------------------------------------------------------------.
-  ModuleInstallerFactory::installList('varbase_auth');
-
-  // Add permissions.
-  ModuleInstallerFactory::addPermissions('varbase_auth');
+  $default_recipe = Recipe::createFromDirectory(__DIR__ . '/recipes/default');
+  RecipeRunner::processRecipe($default_recipe);
 
 }

@@ -31,8 +31,6 @@
     "oomphinc/composer-installers-extender": "~2",
     "cweagans/composer-patches": "~1",
     "drupal/core": "~10",
-    "vardot/entity-definition-update-manager": "~1",
-    "vardot/module-installer-factory": "~1",
     "drupal/social_api": "~3",
     "drupal/social_auth": "~3",
     "drupal/social_auth_google": "~3",
