@@ -13,11 +13,8 @@ Now you can install Varbase Social Single Sign-On with any Drupal site.
 
 However, using it with Varbase distro gives you way much more cool stuff!
 
-### Varbase Auth login
-[![](https://www.drupal.org/files/issues/2019-02-21/Log-in--varbase_auth--dev-varbase6c-2.png)](https://www.drupal.org/project/varbase_auth)
-
-### We could enable it at the Extra Components installation step of Varbase.
-[![](https://www.drupal.org//files/issues/varbase_auth-installer.png)](https://www.drupal.org/project/varbase_auth)
+### Varbase Login Page
+[![](https://www.drupal.org/files/issues/2024-03-13/Log-in-varbase10c1--standard-screen.png)](https://www.drupal.org/project/varbase_auth)
 
 
 ## Requirements:
