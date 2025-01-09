@@ -27,10 +27,10 @@
     "vardot/varbase-patches": "~10.1.0 || 10.1.x-dev",
     "vardot/entity-definition-update-manager": "~1",
     "vardot/module-installer-factory": "~1",
-    "drupal/social_api": "~3",
-    "drupal/social_auth": "~3",
-    "drupal/social_auth_google": "~3",
-    "drupal/social_auth_facebook": "~3",
-    "drupal/social_auth_linkedin": "~3"
+    "drupal/social_api": "~4.1.0",
+    "drupal/social_auth": "~4.2.0",
+    "drupal/social_auth_google": "~4",
+    "drupal/social_auth_facebook": "~4",
+    "drupal/social_auth_linkedin": "~4"
   }
 }
