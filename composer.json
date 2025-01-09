@@ -31,7 +31,6 @@
     "drupal/social_auth": "~3",
     "drupal/social_auth_google": "~3",
     "drupal/social_auth_facebook": "~3",
-    "drupal/social_auth_twitter": "~3",
     "drupal/social_auth_linkedin": "~3"
   }
 }
