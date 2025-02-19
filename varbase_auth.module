@@ -47,11 +47,16 @@ function varbase_auth_preprocess_page(&$variables) {
  */
 function varbase_auth_preprocess_login_with(&$variables) {
 
-  if (\Drupal::moduleHandler()->moduleExists('social_auth')) {
+  // Check if the Social Auth module exists and social networks are set.
+  if (!\Drupal::moduleHandler()->moduleExists('social_auth') || empty($variables['social_networks'])) {
+    return;
+  }
+
+  if (is_array($variables['social_networks']) && $variables['social_networks'] > 0) {
+    $module_path = Drupal::service('module_handler')->getModule('varbase_auth')->getPath();
+
     foreach ($variables['social_networks'] as $social_network_index => $social_network) {
       if (isset($social_network['img_path'])) {
-        $module_path = Drupal::service('module_handler')->getModule('varbase_auth')->getPath();
-
         $replaced_path_for_icons = str_replace('modules/contrib', 'social_auth', $social_network['img_path']);
         $social_network_img_path_in_vartheme = $module_path . '/images/' . $replaced_path_for_icons;
 
