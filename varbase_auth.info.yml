@@ -2,7 +2,7 @@ name: Varbase Social Single Sign-On
 description: Adds single sign-on using existing information from a social networking service. Such as Facebook, Twitter, LinkedIn, or Google. Built using Social API.
 type: module
 package: Varbase
-core_version_requirement: '>=11.1'
+core_version_requirement: ~11.2.0
 dependencies:
   - drupal:system
   - drupal:block
