@@ -53,22 +53,20 @@ function varbase_auth_preprocess_login_with(&$variables) {
   }
 
   if (is_array($variables['networks']) && $variables['networks'] > 0) {
-    $module_path = Drupal::service('module_handler')->getModule('varbase_auth')->getPath();
-
     foreach ($variables['networks'] as $id => $network) {
       $network_definition = $network->getPluginDefinition();
       if (isset($network_definition['img_path'])) {
-        $network_img_path_in_vartheme = $module_path . '/images/social_auth/' . $network_definition['provider'] . '/' . $network_definition['img_path'];
+        $module_path = \Drupal::service('extension.list.module')->getPath('varbase_auth');
+        $network_img_path_in_varbase_admin = $module_path . '/images/social_auth/' . $network_definition['provider'] . '/' . $network_definition['img_path'];
 
-        if (file_exists(DRUPAL_ROOT . '/' . $network_img_path_in_vartheme)) {
+        if (file_exists(DRUPAL_ROOT . '/' . $network_img_path_in_varbase_admin)) {
           $variables['custom_networks'][$id] = [
-            'img_path' => $network_img_path_in_vartheme,
+            'img_path' => $network_img_path_in_varbase_admin,
           ];
         }
       }
     }
   }
-
 }
 
 /**
