@@ -7,6 +7,9 @@ const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
 
 module.exports = {
   mode: 'production',
+  optimization: {
+    moduleIds: 'deterministic',
+  },
   entry: {
     // ################################################
     // SCSS
@@ -16,7 +19,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'css'),
-    pathinfo: true,
+    pathinfo: false,
     publicPath: '',
   },
   module: {
@@ -44,23 +47,22 @@ module.exports = {
         test: /\.(css|scss)$/,
         use: [
           {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              name: '[name].[ext]?[hash]',
-            }
+            loader: MiniCssExtractPlugin.loader
           },
           {
             loader: 'css-loader',
             options: {
               sourceMap: isDev,
               importLoaders: 2,
-              url: (url) => {
-                // Don't handle sprite svg
-                if (url.includes('sprite.svg')) {
-                  return false;
+              modules: false,
+              url: {
+                filter: (url) => {
+                  // Don't handle sprite svg
+                  if (url.includes('sprite.svg')) {
+                    return false;
+                  }
+                  return true;
                 }
-
-                return true;
               },
             },
           },
@@ -110,7 +112,9 @@ module.exports = {
     new CleanWebpackPlugin({
       cleanStaleWebpackAssets: false
     }),
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      ignoreOrder: true
+    }),
   ],
   watchOptions: {
     aggregateTimeout: 300,

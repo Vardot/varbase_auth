@@ -15,7 +15,7 @@
   transition: box-shadow .2s ease 0s, color;
 }
 
-.social-auth .social-network:hover, .social-auth .social-network:active, .social-auth .social-network:focus {
+.social-auth .social-network:hover,.social-auth .social-network:active,.social-auth .social-network:focus {
   box-shadow: 0 1px var(--gin-spacing-xxs) var(--gin-shadow-button) !important;
 }
 
@@ -48,11 +48,10 @@
   margin: var(--gin-spacing-xxl) 0;
   display: flex;
   align-items: center;
-  width: calc(4 * var(--gin-spacing-xxxl) + 3 * var(--gin-spacing-xxxl));
+  width: calc(4*var(--gin-spacing-xxxl) + 3*var(--gin-spacing-xxxl));
 }
 
-.separator .separator-start,
-.separator .separator-end {
+.separator .separator-start,.separator .separator-end {
   height: .0625em;
   background-color: var(--color-gray-200);
   width: 100%;
