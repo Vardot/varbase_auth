@@ -23,7 +23,7 @@
  *
  * @internal
  */
-function varbase_auth__add_template_variable(array &$variables, array $data = NULL) {
+function varbase_auth__add_template_variable(array &$variables, ?array $data = NULL) {
   static $key = 'varbase';
 
   if (!isset($variables[$key])) {
