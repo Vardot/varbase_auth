@@ -4,6 +4,4 @@ type: module
 package: Varbase
 core_version_requirement: ~11.3.0
 dependencies:
-  - drupal:system
-  - drupal:block
   - social_auth:social_auth

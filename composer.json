@@ -17,7 +17,6 @@
   },
   "require": {
     "drupal/core": "~11.3.0",
-    "vardot/varbase-patches": "~10.1.0",
     "drupal/social_api": "~4.1.0",
     "drupal/social_auth": "~4.2.0",
     "drupal/social_auth_google": "~4",
