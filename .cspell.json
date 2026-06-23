@@ -61,6 +61,8 @@
     "vartheme",
     "distro",
     "endfor",
-    "pathinfo"
+    "pathinfo",
+    "phar",
+    "phpstan"
   ]
 }
