@@ -46,6 +46,14 @@
     "airbnb",
     "vartheme",
     "distro",
-    "endfor"
+    "endfor",
+    "webship",
+    "cucumber",
+    "playwright",
+    "contentinfo",
+    "dropbutton",
+    "phar",
+    "phpstan",
+    "sso"
   ]
 }
