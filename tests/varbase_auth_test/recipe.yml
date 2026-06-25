@@ -1,0 +1,6 @@
+name: 'Varbase Social Single Sign-On Test'
+description: 'Provisions a site for the Varbase Social Single Sign-On automated tests: installs Varbase Social Single Sign-On and a social authentication provider.'
+type: 'Testing'
+install:
+  - varbase_auth
+  - social_auth_google
