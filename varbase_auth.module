@@ -5,39 +5,16 @@
  * Contains varbase_auth.module.
  */
 
+use Drupal\Core\Hook\Attribute\LegacyHook;
+use Drupal\varbase_auth\Hook\VarbaseAuthHooks;
+
 // Include all helpers.
 include_once __DIR__ . '/includes/helpers.inc';
 
 /**
  * Implements hook_preprocess_page().
  */
+#[LegacyHook]
 function varbase_auth_preprocess_page(&$variables) {
-
-  $current_rout = \Drupal::routeMatch()->getRouteName();
-
-  $current_rout = (string) $current_rout;
-
-  if ($current_rout == 'user.register' ||
-      $current_rout == 'user.login') {
-    // Get list of enabled modules.
-    $modules_list = \Drupal::service('module_handler')->getModuleList();
-
-    // Check if at least one social auth module is enabled.
-    $we_do_have_enabled_social_auth_modules = FALSE;
-    foreach ($modules_list as $module_index => $module_value) {
-      $module_index = (string) $module_index;
-      if (substr_count($module_index, 'social_auth_') > 0) {
-        $we_do_have_enabled_social_auth_modules = TRUE;
-        break;
-      }
-    }
-
-    // Add variables to template.
-    varbase_auth__add_template_variable($variables, [
-      'we_do_have_enabled_social_auth_modules' => [
-        'type' => 'bool',
-        'value' => $we_do_have_enabled_social_auth_modules,
-      ],
-    ]);
-  }
+  \Drupal::service(VarbaseAuthHooks::class)->preprocessPage($variables);
 }

@@ -1,0 +1,6 @@
+services:
+  Drupal\varbase_auth\Hook\VarbaseAuthHooks:
+    class: Drupal\varbase_auth\Hook\VarbaseAuthHooks
+    arguments:
+      - '@current_route_match'
+      - '@module_handler'
