@@ -54,6 +54,8 @@
     "dropbutton",
     "phar",
     "phpstan",
-    "sso"
+    "sso",
+    "artefacts",
+    "infobars"
   ]
 }
