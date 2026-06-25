@@ -1,28 +1,27 @@
 {
-  "name": "drupal/varbase_auth",
-  "description": "Varbase Social Single Sign-On: Adds single sign-on using existing information from a social networking service. Such as Facebook, Twitter, LinkedIn, or Google. Built using Social API.",
-  "type": "drupal-module",
-  "homepage": "https://www.drupal.org/project/varbase_auth",
-  "license": "GPL-2.0-or-later",
-  "authors": [
-    {
-      "name": "Vardot",
-      "homepage": "https://www.drupal.org/vardot",
-      "role": "Maintainer"
+    "name": "drupal/varbase_auth",
+    "description": "Varbase Social Single Sign-On: Adds single sign-on using existing information from a social networking service. Such as Facebook, Twitter, LinkedIn, or Google. Built using Social API.",
+    "type": "drupal-module",
+    "homepage": "https://www.drupal.org/project/varbase_auth",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Vardot",
+            "homepage": "https://www.drupal.org/vardot",
+            "role": "Maintainer"
+        }
+    ],
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/varbase_auth",
+        "source": "http://cgit.drupalcode.org/varbase_auth"
+    },
+    "require": {
+        "drupal/core": "~11.3.0",
+        "vardot/varbase-patches": "~9",
+        "drupal/social_api": "~4.1.0",
+        "drupal/social_auth": "~4.2.0",
+        "drupal/social_auth_google": "~4",
+        "drupal/social_auth_facebook": "~4",
+        "drupal/social_auth_linkedin": "~4"
     }
-  ],
-  "support": {
-    "issues": "https://www.drupal.org/project/issues/varbase_auth",
-    "source": "http://cgit.drupalcode.org/varbase_auth"
-  },
-  "require": {
-    "drupal/core": "~10.6.0 || ~11.3.0",
-    "vardot/varbase-patches": "~9",
-    "drupal/social_api": "~3",
-    "drupal/social_auth": "~3",
-    "drupal/social_auth_google": "~3",
-    "drupal/social_auth_facebook": "~3",
-    "drupal/social_auth_twitter": "~3",
-    "drupal/social_auth_linkedin": "~3"
-  }
 }
