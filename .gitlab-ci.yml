@@ -93,8 +93,6 @@ webship-js-test:
     - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT recipe
         $CI_PROJECT_DIR/tests/varbase_auth_test -y
     - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT cache:rebuild
-    # TEMP DEBUG kernel handle
-    - "$CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT ev '$req=\Symfony\Component\HttpFoundation\Request::create(\"/user/login\");$k=\Drupal::service(\"http_kernel\");try{$resp=$k->handle($req);echo \"STATUS=\".$resp->getStatusCode().\"\n\";}catch(\Throwable $e){echo \"THROWN \".get_class($e).\": \".$e->getMessage().\"\n\";echo $e->getFile().\":\".$e->getLine().\"\n\";echo $e->getTraceAsString();}' 2>&1 || true"
     - !reference [.fragments, node_playwright]
   script:
     # cucumber.js loads only tests/features/drupal/**. Disable webship-js's auto
