@@ -16,7 +16,7 @@
         "source": "http://cgit.drupalcode.org/varbase_auth"
     },
     "require": {
-        "drupal/core": "~11.3.0",
+        "drupal/core": "~11.4.0",
         "drupal/social_api": "~4.0",
         "drupal/social_auth": "~4.1.0",
         "drupal/social_auth_google": "~4",
