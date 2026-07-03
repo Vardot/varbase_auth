@@ -13,8 +13,7 @@
     "yarn.lock",
     "**/.*.json",
     ".*ignore",
-    ".yarn/**",
-    "webpack.config.*.js"
+    ".yarn/**"
   ],
   "words": [
     "varbase",
@@ -43,24 +42,20 @@
     "oauth",
     "signin",
     "signup",
-    "stylelint",
     "eslint",
-    "browserslist",
-    "postcss",
-    "pxtorem",
-    "rtlcss",
-    "spritemap",
-    "terser",
-    "webpack",
-    "jsdom",
-    "loadjs",
-    "sortablejs",
-    "tabbable",
-    "autoprefixer",
     "airbnb",
     "vartheme",
     "distro",
     "endfor",
-    "pathinfo"
+    "webship",
+    "cucumber",
+    "playwright",
+    "contentinfo",
+    "dropbutton",
+    "phar",
+    "phpstan",
+    "sso",
+    "artefacts",
+    "infobars"
   ]
 }

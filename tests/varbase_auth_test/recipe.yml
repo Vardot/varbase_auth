@@ -1,0 +1,13 @@
+name: 'Varbase Social Single Sign-On Test'
+description: 'Provisions a site for the Varbase Social Single Sign-On automated tests: installs Varbase Social Single Sign-On with the Google, Facebook and LinkedIn social authentication providers, and opens visitor registration so the sign-on options appear on the register page.'
+type: 'Testing'
+install:
+  - varbase_auth
+  - social_auth_google
+  - social_auth_facebook
+  - social_auth_linkedin
+config:
+  actions:
+    user.settings:
+      simpleConfigUpdate:
+        register: visitors_admin_approval

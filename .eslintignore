@@ -1,13 +1,4 @@
-node_modules/**/*
-# Ignore deliberately malformed YAML files.
-drupalci.yml
-
-# Webpack configuration files
-webpack.config.js
-webpack.config.*.js
-
-# Build output
-css/
+**/node_modules
 
 # Vendor files
 vendor/

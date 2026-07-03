@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_auth
+    - system
+  theme:
+    - olivero
+id: olivero_social_auth_login
+theme: olivero
+region: content
+weight: -10
+provider: null
+plugin: social_auth_login
+settings:
+  id: social_auth_login
+  label: 'Or sign in with'
+  label_display: visible
+  provider: social_auth
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/user/login\n/user/register"
