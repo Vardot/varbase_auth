@@ -26,7 +26,6 @@ However, using it with Varbase distro gives you way much more cool stuff!
 * [Social Auth](https://www.drupal.org/project/social_auth).
 * [Social Auth Google](https://www.drupal.org/project/social_auth_google).
 * [Social Auth Facebook](https://www.drupal.org/project/social_auth_facebook).
-* [Social Auth Twitter](https://www.drupal.org/project/social_auth_twitter).
 * [Social Auth Linkedin](https://www.drupal.org/project/social_auth_linkedin).
 
 This module is best used with [Varbase](https://www.drupal.org/project/varbase)
