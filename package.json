@@ -40,7 +40,7 @@
     "imagemin": "^8.0.1",
     "img-loader": "^4.0.0",
     "mini-css-extract-plugin": "^2.9.2",
-    "postcss": "^8.4.49",
+    "postcss": "^8.5.18",
     "postcss-loader": "^8.1.1",
     "postcss-perfectionist": "^2.3.9",
     "prettier": "^3.4.2",
