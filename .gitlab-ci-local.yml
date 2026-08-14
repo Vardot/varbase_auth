@@ -2,9 +2,9 @@
 # Self-contained: builds a Drupal 11 site (PHP 8.3, MariaDB) with varbase_auth
 # via a Composer path repository, applies the varbase_auth_test recipe (which
 # installs the social providers + places the Social Auth login block + opens
-# registration), serves it with `drush runserver` and runs the webship-js suite.
+# registration), serves it with `drush runserver` and runs the varbase-e2e suite.
 #
-#   gitlab-ci-local --file .gitlab-ci-local.yml webship-js-test
+#   gitlab-ci-local --file .gitlab-ci-local.yml varbase-e2e-test
 
 stages:
   - test
@@ -14,7 +14,7 @@ variables:
   COMPOSER_MEMORY_LIMIT: "-1"
   COMPOSER_ALLOW_SUPERUSER: "1"
 
-webship-js-test:
+varbase-e2e-test:
   stage: test
   image: node:20-bookworm
   services:
