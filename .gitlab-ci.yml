@@ -104,7 +104,7 @@ varbase-e2e-test:
     # cucumber.js loads only tests/features/drupal/**. Disable varbase-e2e's auto
     # HTML hook and run generate-reports explicitly so HTML + PDF land next to
     # the JSON in tests/reports/.
-    - WEBSHIP_REPORT_DISABLE=1 ./node_modules/.bin/cucumber-js --config cucumber.js --tags "not @wip"
+    - VARBASE_E2E_REPORT_DISABLE=1 ./node_modules/.bin/cucumber-js --config cucumber.js --tags "not @wip"
     - node ./node_modules/@vardot/varbase-e2e/bin/generate-reports.js
         --json tests/reports/cucumber_report.json
         --out  tests/reports/cucumber_report.html
