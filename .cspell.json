@@ -47,7 +47,7 @@
     "vartheme",
     "distro",
     "endfor",
-    "webship",
+    "varbase-e2e",
     "cucumber",
     "playwright",
     "contentinfo",

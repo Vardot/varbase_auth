@@ -10,7 +10,7 @@ use Drupal\varbase_auth\Hook\VarbaseAuthHooks;
 /**
  * Unit tests for the Varbase Auth object-oriented hooks.
  *
- * Functional and browser coverage lives in the webship-js suite
+ * Functional and browser coverage lives in the varbase-e2e suite
  * (tests/features/drupal). These PHP tests only exercise unit-testable logic.
  *
  * @coversDefaultClass \Drupal\varbase_auth\Hook\VarbaseAuthHooks
