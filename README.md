@@ -2,7 +2,7 @@
 
 # Varbase Social Single Sign-On
 [![pipeline status](https://git.drupalcode.org/project/varbase_auth/badges/11.0.x/pipeline.svg)](https://git.drupalcode.org/project/varbase_auth/-/pipelines)
-[![Varbase Social Single Sign-On](https://img.shields.io/badge/Varbase%20Social%20Single%20Sign-On-11.0.0--alpha2-0d6efc?labelColor=001d38&style=flat-square)](https://git.drupalcode.org/project/varbase_auth/-/pipelines?ref=11.0.0-alpha2)
+[![Varbase Social Single Sign-On](https://img.shields.io/badge/Varbase%20Social%20Single%20Sign-On-11.0.0-0d6efc?labelColor=001d38&style=flat-square)](https://git.drupalcode.org/project/varbase_auth/-/pipelines?ref=11.0.0)
 [![Automated Functional Testing](https://git.drupalcode.org/project/varbase_project/badges/11.0.x/pipeline.svg)](https://git.drupalcode.org/project/varbase_project/-/pipelines)
 ---
 
