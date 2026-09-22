@@ -35,7 +35,7 @@ This module is best used with [Varbase](https://www.drupal.org/project/varbase)
  distribution.
 
 Join Our Slack Team for Feedback and Support
-Join now: http://slack.varbase.vardot.com
+Join now: https://varbase.slack.com
 
 This module is sponsored and developed by
  [Vardot](https://www.drupal.org/vardot).
