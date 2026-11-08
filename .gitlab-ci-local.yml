@@ -16,7 +16,7 @@ variables:
 
 varbase-e2e-test:
   stage: test
-  image: node:20-bookworm
+  image: node:24-bookworm
   services:
     - name: mariadb:10.11
       alias: database
