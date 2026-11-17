@@ -1,5 +1,5 @@
 # Local reproduction pipeline for gitlab-ci-local (firecow/gitlab-ci-local).
-# Self-contained: builds a Drupal 11 site (PHP 8.3, MariaDB) with varbase_auth
+# Self-contained: builds a Drupal 11 site (PHP 8.5, MariaDB) with varbase_auth
 # via a Composer path repository, applies the varbase_auth_test recipe (which
 # installs the social providers + places the Social Auth login block + opens
 # registration), serves it with `drush runserver` and runs the varbase-e2e suite.
@@ -35,7 +35,7 @@ varbase-e2e-test:
     - curl -sSL https://packages.sury.org/php/apt.gpg -o /etc/apt/trusted.gpg.d/sury-php.gpg
     - echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/sury-php.list
     - apt-get update -qq
-    - apt-get install -y -qq php8.4-cli php8.4-mysql php8.4-gd php8.4-mbstring php8.4-xml php8.4-curl php8.4-zip default-mysql-client >/dev/null
+    - apt-get install -y -qq php8.5-cli php8.5-mysql php8.5-gd php8.5-mbstring php8.5-xml php8.5-curl php8.5-zip default-mysql-client >/dev/null
     - php -v | head -n1
     - for i in $(seq 1 60); do mysqladmin --host=database --user=root ping >/dev/null 2>&1 && break; sleep 2; done
     - mysqladmin --host=database --user=root ping
